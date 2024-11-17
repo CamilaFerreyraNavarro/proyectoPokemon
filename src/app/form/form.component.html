@@ -1,0 +1,17 @@
+<form method="post" [formGroup]="form" (ngSubmit)="enviar()">
+  <div>
+    <label for="name-pokemon">Nombre</label>
+  </div>
+
+  <div>
+    <select formControlName="category" id="category">
+      <option value="" selected>Selecciona una opción</option>
+      <option value="fire">Fuego</option>
+      <option value="water">Agua</option>
+      <option value="earth">Tierra</option>
+    </select>
+  </div>
+  <div class="button-form">
+    <button type="submit" [disabled]="form.invalid">Buscar</button>
+  </div>
+</form>
